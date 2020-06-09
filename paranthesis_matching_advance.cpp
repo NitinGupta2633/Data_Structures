@@ -12,11 +12,27 @@ class stack
 		 	arr[index]=p;
 		 	index++;
 			 top++;
+		
 		 }
-		 void pop()
+		 void pop(char p)
 		 {
-		 	top=top-1;
-		 	index--;
+		 	
+		 	if( p==')' && arr[top]=='(')
+		 	{
+		 		top=top-1;
+		 		index--;
+		 	
+			 }
+			 else if(p==']'&&arr [top]=='[')
+		 	{
+		 		top=top-1;
+		 		index--;
+			 }
+			  else if(p=='}'&& arr[top]=='{')
+		 	{
+		 		top=top-1;
+		 		index--;
+			 }
 		 }
 		 int  isempty()
 		 {
@@ -41,13 +57,15 @@ int main()
 	stack l;
 	for(int i=0;s[i]!='\0';i++)
 	{
-		if(s[i]=='(')
+		if(s[i]=='(' || s[i]=='{' ||s[i]=='[' )
 		{
+			
 			l.push(s[i]);
 		}
-		if(s[i]==')')
+		if(s[i]==')'|| s[i]=='}'|| s[i]==']')
 		{
-			l.pop();
+			
+			l.pop(s[i]);
 		}
 	}
 int r;

@@ -4,7 +4,7 @@ class stack
 	public:
 	static int index;
   static int size;
-	int top;
+	int top=-1;
 	int arr[100];
 	public:
 		void create()
@@ -18,7 +18,7 @@ class stack
 		    if(index<size)
 		    {
 				arr[index]=n;
-				top=index;
+				top++;
 				index++;
 			}
 			else 
@@ -59,7 +59,7 @@ class stack
 		}
 		void isempty()
 		{
-			if(top==0)
+			if(top==-1)
 			{
 				std::cout<<"stack is empty"<<std::endl;
 			}
@@ -101,6 +101,6 @@ int main()
 	s.display();
 	//s.peek(3);
 	//s.isfull();
-	//s.isempty();
+	s.isempty();
 	s.stack_top();
 }
