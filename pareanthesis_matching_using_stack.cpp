@@ -16,6 +16,7 @@ class stack
 		 void pop()
 		 {
 		 	top=top-1;
+		 	index--;
 		 }
 		 int  isempty()
 		 {
