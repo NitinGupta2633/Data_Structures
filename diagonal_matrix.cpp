@@ -16,19 +16,22 @@ int main()
 }
 int print_diagonal(int arr[],int n)
 {
-	int arr1[n][n];
+	
 	
 	for(int i=0;i<n;i++)
 	{
 		for(int j=0;j<n;j++)
 		{
-			arr1[i][j]=0;
+		
 			if(i==j)
 			{
-				arr1[i][j]=arr[i];
+			   std::cout<<arr[i]<<" ";
 			}
-			std::cout<<arr1[i][j]<<" ";
+			else
+			{
 			
+			std::cout<<"0"<<" ";
+		}
 		}
 		std::cout<<"\n";
 	}
