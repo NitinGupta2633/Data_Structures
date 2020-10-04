@@ -59,7 +59,7 @@ class link_list{
 		while(head!=NULL)
 		{
 			cout<<head->data<<endl;
-			recursive_display(head->next)
+			recursive_display(head->next);
 			}
 				}		
 	};

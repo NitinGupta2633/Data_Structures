@@ -65,6 +65,8 @@ int main()
 	l.append(3);
 	l.append(4);
 	l.append(5);
+	l.display();
 	l.reverse();
+	cout<<"after reversing"<<endl;
 	l.display();
 }
